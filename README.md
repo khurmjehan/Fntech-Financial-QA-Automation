@@ -1,16 +1,18 @@
 # FinTech Financial QA Automation Project
 
-A Cucumber BDD and Selenium Java test automation framework designed to validate mortgage calculation functionality on financial web applications.
+A hybrid Cucumber BDD, Selenium Java, and RestAssured API test automation framework designed to validate mortgage calculation functionality and backend endpoints on financial web applications.
 
 ---
 
 ### **Tech Stack**
 * **Language:** Java 21
-* **Automation Tool:** Selenium WebDriver
+* **UI Automation Tool:** Selenium WebDriver
+* **API Automation Tool:** RestAssured
 * **BDD Framework:** Cucumber (Gherkin)
 * **Test Runner:** TestNG
 * **Design Pattern:** Page Object Model (POM)
 * **Build Tool:** Apache Maven
+* **CI/CD Pipelines:** Jenkins & GitHub Actions
 
 ---
 
@@ -18,7 +20,13 @@ A Cucumber BDD and Selenium Java test automation framework designed to validate 
 ```text
 Fntech-Financial-QA-Automation
 │
+├── .github
+│   └── workflows
+│       └── maven.yml                     # GitHub Actions CI/CD configuration
+│
 ├── src/test/java/com/fintech/qa
+│   ├── api
+│   │   └── MortgageApiTests.java         # RestAssured API test validation
 │   ├── pages
 │   │   └── MortgagePage.java             # Page elements & actions (POM)
 │   ├── stepdefinitions
@@ -30,6 +38,7 @@ Fntech-Financial-QA-Automation
 │
 └── src/test/resources
     └── features
-        └── MortgageCalculator.feature    # BDD feature files written in Gherkin 
+        └── MortgageCalculator.feature    # BDD feature files written in Gherkin
         
+
                                                                       
